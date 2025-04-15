@@ -12,7 +12,7 @@ public class Program
     {
         Console.WriteLine("\nType 'f' to run a fast test configuration.");
         Console.WriteLine("Press ENTER to use the slower default configuration.");
-        bool fast = Console.ReadKey().Key == ConsoleKey.F;
+        bool fast = true; // Console.ReadKey().Key == ConsoleKey.F;
         string configType = fast ? "fast" : "default";
         Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine($"\nProceeding with {configType} configuration...\n");
