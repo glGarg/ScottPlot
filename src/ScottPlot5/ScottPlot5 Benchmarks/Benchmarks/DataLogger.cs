@@ -1,7 +1,9 @@
 ﻿using BenchmarkDotNet.Attributes;
 using SkiaSharp;
+using BenchmarkDotNet.Diagnosers;
 
 namespace ScottPlotBench.Benchmarks;
+[MemoryDiagnoser]
 public class DataLogger
 {
     [Params(100, 1_000, 10_000, 100_000)]
