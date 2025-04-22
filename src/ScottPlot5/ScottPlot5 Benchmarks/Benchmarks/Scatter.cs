@@ -1,9 +1,11 @@
 ﻿using BenchmarkDotNet.Attributes;
 using SkiaSharp;
 using BenchmarkDotNet.Diagnosers;
+using BenchmarkDotNet.Exporters.Json;
 
 namespace ScottPlotBench.Benchmarks;
 [MemoryDiagnoser]
+[JsonExporterAttribute.Brief]
 public class Scatter
 {
     [Params(100, 1_000, 10_000, 100_000)]
